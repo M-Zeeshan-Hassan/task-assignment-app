@@ -17,6 +17,7 @@ const config: Config = {
         'fade-in': 'fadeIn 0.2s ease-in-out',
         'zoom-in': 'zoomIn 0.2s ease-in-out',
         'slide-in': 'slideIn 0.2s ease-in-out',
+        'shake': 'shake 0.5s ease-in-out',
       },
       keyframes: {
         fadeIn: {
@@ -31,6 +32,17 @@ const config: Config = {
           '0%': { opacity: '0', transform: 'translateY(-10px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        shake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '25%': { transform: 'translateX(-5px)' },
+          '75%': { transform: 'translateX(5px)' },
+        },
+      },
+      boxShadow: {
+        '3xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+      },
+      backdropBlur: {
+        xs: '2px',
       },
     },
   },
