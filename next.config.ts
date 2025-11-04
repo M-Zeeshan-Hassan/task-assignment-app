@@ -1,8 +1,12 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Disable Turbopack to avoid build issues
+  experimental: {
+    turbo: undefined,
+  },
+  images: {
+    domains: ['localhost'],
+  },
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
-};
-
-export default nextConfig;
+module.exports = nextConfig
